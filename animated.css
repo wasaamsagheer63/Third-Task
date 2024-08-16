@@ -1,0 +1,141 @@
+*{
+margin:0;
+padding:0;
+box-sizing: border-box;
+font-family: 'Times New Roman', Times, serif;
+}
+
+:root{
+    --first-color:purple;
+    --first-volor-light:white;
+    --facebook:grey;
+    --twitter:blue;
+    --instagram:red;
+    --youtube:red;
+}
+body{
+    background: linear-gradient(60deg, blue, rgb(77, 211, 252) 80%);
+}
+.mainbox{
+    transform: translate(50%, 700%);
+}
+label{
+    text-transform: uppercase;
+    text-align: center;
+    height:120%;
+    width:150%;
+    background: white;
+    border-radius: 35px ;
+    font-size: 40px;
+    font-weight: 500;
+    position:relative;
+    box-shadow: 0 0 20px black;
+transition: all 0.3s ease;
+padding:10px;
+border:2px solid blue;
+}
+.media_{
+background: white;
+position: absolute;
+height:70px;
+width:195px;
+justify-content:space-between;
+border-radius: 35px;
+padding:28px;
+padding-right:50px;
+transform: translateY(-150px);
+margin-left: -2.5%;
+box-shadow: 0 0 20px  black;
+border:2px solid blue;
+opacity:0;
+text-align: center;
+display: flex;
+
+
+
+}
+.media_:hover{
+   
+cursor: pointer;
+transition: all 0.5s ease;
+
+}
+label:hover{
+    letter-spacing: 2px;
+    cursor: pointer;
+    
+}
+label::before{
+    content:'Cancel';
+    position:absolute;
+    height:100%;
+    width:100%;
+    left:0;
+    top:0;
+    background: white;
+    border-radius: 35px;
+    opacity:0;
+    padding:0.5px;
+    font-size:30px;
+    align-content: center;
+    font-weight: 500;
+}
+#check{
+    display: none;
+}
+#check:checked ~ label::before{
+    opacity:1;
+}
+#check:checked ~ .media_{
+    opacity:1;
+}
+#check:checked ~ .media_::before{
+    opacity:1;
+}
+.media_::before{
+   content:"";
+    height:20px;
+    width:20px;
+    z-index: 1;
+    background-color: white;
+    transform: translate(43px, 28px) rotate(45deg);
+}
+ i:nth-child(1):hover{
+    color:blue;
+    margin-top:-4px;
+    
+    
+}
+i:hover{
+    transform: translateY(-4px);
+}
+i:nth-child(2):hover{
+    color:blue;
+    margin-top:-4px;
+}
+i:nth-child(3):hover{
+    color:red;
+    margin-top:-4px;
+}
+i:nth-child(4):hover{
+    color:red;
+    margin-top:-4px;
+}
+i:nth-child(1){
+    transform: translateX(-170%);
+    
+}
+i:nth-child(2){
+    transform: translateX(-100%);
+    
+}
+i:nth-child(3){
+    transform: translateX(20%);
+    
+}
+i:nth-child(4){
+    transform: translateX(100%);
+    
+}
+
+
